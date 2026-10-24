@@ -15,7 +15,7 @@
 .fs-demo-dialog{border:1px solid #c5bca7;border-radius:4px;background:#f7f5ef;color:#514f40;padding:2rem;max-width:min(30rem,calc(100vw - 3rem));box-shadow:0 18px 60px #0003;font:16px/1.8 sans-serif;text-align:center}.fs-demo-dialog::backdrop{background:#24211666}.fs-demo-dialog p{margin:0 0 1.5rem}.fs-demo-dialog button{background:#514f40;color:#fff;border:0;padding:.65rem 2.5rem;cursor:pointer}.fs-demo-dialog button:focus-visible{outline:2px solid #514f40;outline-offset:4px}
 
 /* Local-only verification and consent details for the restored contact form. */
-#contact .fs-contact-verification{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(100%,300px);height:65px;padding:12px;border:1px solid #d7d7d7;border-radius:4px;background:#fafafa;color:#333;font:12px/1.4 sans-serif;letter-spacing:0}
+#contact .fs-contact-verification{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;height:65px;padding:12px;border:1px solid #d7d7d7;border-radius:4px;background:#fafafa;color:#333;font:12px/1.4 sans-serif;letter-spacing:0}
 #contact .fs-contact-verification label{display:flex;align-items:center;gap:10px;cursor:pointer}
 #contact .fs-contact-verification input{appearance:auto;flex-shrink:0;width:18px;height:18px;margin:0;accent-color:#514f40}
 #contact .fs-contact-verification-note{font-size:9px;line-height:1.4;letter-spacing:.04em;text-align:right;color:#6b6b6b}
