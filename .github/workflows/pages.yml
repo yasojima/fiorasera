@@ -1,0 +1,38 @@
+name: Deploy FIORASERA
+on:
+  push:
+    branches: [main]
+    paths: ['dist/**', 'site-source.zip', '.github/workflows/pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import uploaded site source
+        if: hashFiles('site-source.zip') != ''
+        run: |
+          unzip -q -o site-source.zip
+          rm site-source.zip
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- dist site-source.zip
+          git commit -m "build(site): import FIORASERA source for Pages"
+          git push origin HEAD:main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
