@@ -84,3 +84,13 @@
  @container fs-course-frame (min-width:50.795011em){.page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:11}}
  @container fs-reservation-copy (max-width:21.60102em){.page-en .p-top__reservationBodyTxt p:nth-of-type(2){min-height:10em}}
 }
+
+/* Keep the reference's body-width typography while its overlays hide the
+   scrollbar. Use the original font formulas and measured scrollbar width. */
+html.is-popupopen,html.is-menuopen{font-size:clamp(90%,calc(16/1440*(100vw - var(--scrollbar-width,0px))),110%)}
+@media screen and (max-width:1024px){
+ html.is-popupopen,html.is-menuopen{font-size:min(calc(16/880*(100vw - var(--scrollbar-width,0px))),100%)}
+}
+@media screen and (max-width:780px){
+ html.is-popupopen,html.is-menuopen{font-size:calc(16/390*(100vw - var(--scrollbar-width,0px)))}
+}
