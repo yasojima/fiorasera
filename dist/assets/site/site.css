@@ -47,3 +47,5 @@
 @media screen and (max-width:780px){body:not(.page-en) .p-top__historyBodySlide .splide__track{min-height:24.625em}}
 
 @media screen and (max-width:780px){.page-en .cm-f__bodyTopInfo{gap:2.325em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(1){min-height:39.25em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(2){min-height:36.325em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(3){min-height:24.625em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(4){min-height:43.6375em}}
+
+@media screen and (max-width:780px){.page-en .p-top__menuTxt{min-height:8em}}
