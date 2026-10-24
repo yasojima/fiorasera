@@ -1,4 +1,6 @@
 .fs-viewport{position:fixed;left:auto;right:0;bottom:0;z-index:2147483646;display:block;padding:7px 10px;border:1px solid #514f4060;border-radius:4px;background:#f7f6f2ed;color:#37362d;font:11px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:0;white-space:nowrap;pointer-events:none;box-shadow:0 1px 8px #0002;max-width:calc(100vw - 24px)}
+/* Keep the required corner readout below the original narrow footer link. */
+@media screen and (max-width:780px){.fs-viewport{padding:0 4px;border-bottom-width:0;font-size:10px;line-height:1;border-radius:2px;box-shadow:none}}
 .fs-demo-link{cursor:pointer;text-align:inherit}
 .fs-demo-map{position:relative;display:grid;place-items:center;width:100%;height:100%;min-height:240px;overflow:hidden;color:white;cursor:pointer;background:#514f40}
 .fs-demo-map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.4)}
