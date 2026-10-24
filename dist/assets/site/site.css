@@ -1,0 +1,38 @@
+/* Content adaptation only. The reference layout and breakpoints remain in style.css. */
+.fs-booking-options{background:rgba(247,246,242,.96);padding:2.2em;color:#514f40;border-radius:2px}
+.fs-eyebrow{font-family:"Cormorant Garamond",serif;letter-spacing:.18em;font-size:.85em;margin-bottom:1.8em}
+.fs-service{display:flex;justify-content:space-between;gap:1.5em;padding:1.2em 0;border-top:1px solid #514f4030;line-height:1.8}
+.fs-service>span{font-family:"Cormorant Garamond",serif;font-size:1.6em;letter-spacing:.08em}
+.fs-service p{font-size:.9em;text-align:right;letter-spacing:.06em}
+.fs-service small{display:block;font-size:.7em;line-height:1.9;letter-spacing:.03em}
+.fs-availability{margin-top:1.6em;font-size:.8em;line-height:1.9;letter-spacing:.1em}
+.fs-course-price{text-align:center;margin:1em 0 .65em;font-family:"Cormorant Garamond",serif;font-size:1.65em;letter-spacing:.07em}
+.fs-course-price small{display:block;font-family:"Zen Old Mincho",serif;font-size:.38em;line-height:1.8;letter-spacing:.08em;margin-top:.3em}
+.fs-course-link{text-align:center;font-size:.75em;letter-spacing:.1em}
+.p-top__historyBodySlide .body__itemYearNum{color:#514f40}
+.fs-course-link .c-link,.fs-popup-course .c-link{display:inline-flex;border-bottom:1px solid currentColor;padding-bottom:.35em}
+.fs-textlink{text-decoration:underline;text-underline-offset:.3em}
+.fs-contact .row{border-top:1px solid #514f4033;padding-top:1.5em}
+.fs-contact .row__title{margin-top:0}
+.fs-contact .row__body{font-size:.9em;line-height:2.2;letter-spacing:.1em}
+.fs-contact .c-link{font-size:1em}
+.fs-phone{font-family:"Cormorant Garamond",serif;font-size:2em;letter-spacing:.08em;white-space:nowrap}
+.fs-small{font-size:.75em;line-height:2;letter-spacing:.08em}
+.fs-privacy{margin-top:2.5em;font-size:.75em;letter-spacing:.1em}
+.fs-dish-name{font-size:1.05em;line-height:2.1;margin-bottom:.6em;font-weight:500}
+.cm-popup__bodyMenuTxt p{font-size:.85em;line-height:2.2;letter-spacing:.1em}
+.fs-popup-course{text-align:center;margin-top:1.8em;font-size:.85em;letter-spacing:.1em}
+.fs-popup-note{text-align:center;margin-top:2em}
+.p-top__menuPhoto img{object-position:62% center}
+.p-top__historyBodyWall img{object-position:40% center}
+.p-top__reservation{background-image:linear-gradient(#0008,#0008),url('../images/dining-room.png');background-position:center;background-size:cover}
+.p-top__firstimgBgBody img,.p-top__firstimgBgBlur img{filter:brightness(.65)}
+@media(max-width:780px){
+ .fs-booking-options{padding:1.5em}
+ .fs-service{gap:1em}
+ .fs-availability{font-size:.78em}
+ .fs-course-price{font-size:1.8em}
+ .fs-contact .row{padding-top:1.2em}
+ .fs-contact .row__body{font-size:.85em}
+ .fs-phone{font-size:1.9em}
+}
