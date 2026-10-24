@@ -45,3 +45,43 @@
 @media screen and (max-width:780px){.page-en .cm-f__bodyTopInfo{gap:2.325em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(1){min-height:39.25em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(2){min-height:36.325em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(3){min-height:24.625em}.page-en .p-top__historyBodySlide .body__item.is-active:nth-child(4){min-height:43.6375em}}
 
 @media screen and (max-width:780px){.page-en .p-top__menuTxt{min-height:8em}}
+
+/* Retain the reference frames when the adopted English copy wraps differently.
+   The two-line Concept title trades its extra line for equal surrounding space. */
+@media screen and (min-width:781px){
+ .page-en .p-top__conceptSentenceSubtitle{--mt:52;--mb:52}
+ .page-en .p-top__conceptSubtitleTxt{max-width:17em;text-align:center}
+ .page-en .cm-f__bodyTopInfo{width:44.26em;flex-shrink:1;gap:1.875em}
+}
+@media screen and (max-width:780px){
+ .page-en .p-top__conceptSentenceSubtitle{--mt:74;--mb:24}
+}
+
+/* Original English course-card height: 12.5em heading/padding plus the
+   original 1.575em line boxes. Query the actual frame width so scrollbar
+   width and the fluid font remain part of the measurement. */
+@media screen and (min-width:781px){
+ .page-en .p-top__historyBodySlide{container:fs-course-frame / inline-size}
+ .page-en .p-top__historyBodySlide .body .splide__track{min-height:max(30em,calc(12.5em + var(--fs-reference-lines)*1.575em))}
+ .page-en .p-top__reservationBodyTxt{container:fs-reservation-copy / inline-size}
+ .page-en .p-top__reservationBodyTxt p:nth-of-type(2){min-height:8em}
+}
+@media screen and (min-width:781px) and (max-width:1024px){
+ .page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:21}
+ @container fs-course-frame (min-width:27.114258em){.page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:20}}
+ @container fs-course-frame (min-width:27.260742em){.page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:19}}
+ /* Original footer copy gains up to three lines in this range. Spread that
+    height over the four gaps in the five approved information rows. */
+ .page-en .cm-f__bodyTopInfo{container:fs-footer-info / inline-size}
+ @container fs-footer-info (max-width:44.232143em){.page-en .cm-f__bodyTopInfo>.row+.row{margin-top:.4em}}
+ @container fs-footer-info (max-width:43.173549em){.page-en .cm-f__bodyTopInfo>.row+.row{margin-top:.8em}}
+ @container fs-footer-info (max-width:42.239397em){.page-en .cm-f__bodyTopInfo>.row+.row{margin-top:1.2em}}
+}
+@media screen and (min-width:1025px){
+ .page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:15}
+ @container fs-course-frame (min-width:40.204536em){.page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:14}}
+ @container fs-course-frame (min-width:43.275282em){.page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:13}}
+ @container fs-course-frame (min-width:47.612305em){.page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:12}}
+ @container fs-course-frame (min-width:50.795011em){.page-en .p-top__historyBodySlide .splide__track{--fs-reference-lines:11}}
+ @container fs-reservation-copy (max-width:21.60102em){.page-en .p-top__reservationBodyTxt p:nth-of-type(2){min-height:10em}}
+}
