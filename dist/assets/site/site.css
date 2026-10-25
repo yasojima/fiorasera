@@ -94,3 +94,47 @@ html.is-popupopen,html.is-menuopen{font-size:clamp(90%,calc(16/1440*(100vw - var
 @media screen and (max-width:780px){
  html.is-popupopen,html.is-menuopen{font-size:calc(16/390*(100vw - var(--scrollbar-width,0px)))}
 }
+
+/* Retain the original Cuisine line boxes at the tablet wrap boundaries. */
+@media screen and (width > 780px) and (max-width:1024px){
+ body:not(.page-en) .p-top__menu-inner{container:fs-ja-menu-frame / inline-size}
+ .page-en .p-top__menu-inner{container:fs-en-menu-frame / inline-size}
+ @container fs-ja-menu-frame (width < 49.776353em){
+  body:not(.page-en) .p-top__menuTxt{min-height:6em}
+ }
+ @container fs-en-menu-frame (width < 48.674058em){
+  .page-en .p-top__menuTxt{min-height:6em}
+ }
+}
+
+/* Balance the adopted Japanese copy within the reference Reservation frame.
+   Each additional line uses 28/16 root em of the original two gaps. */
+@media screen and (width > 780px){
+ body:not(.page-en) .p-top__reservationBody-inner{container:fs-ja-reservation-frame / inline-size}
+ body:not(.page-en) .p-top__reservationBodyTxt p:nth-of-type(2){--mt:40}
+ body:not(.page-en) .p-top__reservationBodyBtn{--mt:32}
+}
+@media screen and (width > 780px) and (max-width:1024px){
+ @container fs-ja-reservation-frame (min-width:50.485910em){
+  body:not(.page-en) .p-top__reservationBodyTxt p:nth-of-type(2){--mt:20}
+  body:not(.page-en) .p-top__reservationBodyBtn{--mt:24}
+ }
+}
+@media screen and (width > 1024px){
+ @container fs-ja-reservation-frame (min-width:45.842159em){
+  body:not(.page-en) .p-top__reservationBodyTxt p:nth-of-type(2){--mt:20}
+  body:not(.page-en) .p-top__reservationBodyBtn{--mt:24}
+ }
+ @container fs-ja-reservation-frame (min-width:51.211563em){
+  body:not(.page-en) .p-top__reservationBodyTxt p:nth-of-type(2){--mt:40}
+  body:not(.page-en) .p-top__reservationBodyBtn{--mt:32}
+ }
+ @container fs-ja-reservation-frame (min-width:51.216640em){
+  body:not(.page-en) .p-top__reservationBodyTxt p:nth-of-type(2){--mt:40}
+  body:not(.page-en) .p-top__reservationBodyBtn{--mt:60}
+ }
+ @container fs-ja-reservation-frame (min-width:55.926080em){
+  body:not(.page-en) .p-top__reservationBodyTxt p:nth-of-type(2){--mt:68}
+  body:not(.page-en) .p-top__reservationBodyBtn{--mt:60}
+ }
+}
