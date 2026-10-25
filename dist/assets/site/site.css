@@ -138,3 +138,23 @@ html.is-popupopen,html.is-menuopen{font-size:clamp(90%,calc(16/1440*(100vw - var
   body:not(.page-en) .p-top__reservationBodyBtn{--mt:60}
  }
 }
+
+/* Preserve the original narrow English frames when a classic scrollbar
+   changes the number of reference text lines. Query actual text width. */
+@media screen and (max-width:780px){
+ .page-en .p-top__concept-body{container:fs-en-concept-frame / inline-size}
+ .page-en .p-top__messageTxt{container:fs-en-message-frame / inline-size}
+ .page-en .cm-f__bodyTopInfo{container:fs-en-mobile-footer / inline-size}
+ @container fs-en-concept-frame (width < 20.553119em){
+  .page-en .p-top__conceptSentenceSubtitle{--mt:82;--mb:32}
+ }
+ @container fs-en-message-frame (width < 20.602394em){
+  .page-en .p-top__messageTxt p:first-of-type{min-height:10em}
+ }
+ @container fs-en-mobile-footer (width < 25.310512em){
+  .page-en .cm-f__bodyTopInfo>.row+.row{margin-top:.4em}
+ }
+ @container fs-en-mobile-footer (width < 24.976609em){
+  .page-en .cm-f__bodyTopInfo>.row+.row{margin-top:.8em}
+ }
+}
